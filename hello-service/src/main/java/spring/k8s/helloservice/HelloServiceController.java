@@ -14,4 +14,9 @@ public class HelloServiceController {
 	public String sayHello(@PathVariable String name) {
 		return "Hello " + name;
 	}
+
+	@GetMapping("/")
+	public String sayHi() {
+		return "Hi!!! ";
+	}
 }

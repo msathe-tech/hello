@@ -5,10 +5,12 @@ metadata:
   name: hello-service
   labels:
     app: hello-service
+  namespace: hello
+
 spec:
   type: LoadBalancer
   ports:
-    - port: 8080
-      name: hello-service
+  - port: 80
+    targetPort: 8080
   selector:
     app: hello-service

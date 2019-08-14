@@ -1,0 +1,38 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: helloclient
+  namespace: hello
+spec:
+  selector:
+    matchLabels:
+      app: helloclient
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: helloclient
+    spec:
+      containers:
+      - name: hello-service
+        image: msathepivotal/helloclient
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: helloclient
+  labels:
+    app: helloclient
+  namespace: hello
+spec:
+  #type: LoadBalancer
+  ports:
+  - port: 80
+    targetPort: 8080
+  selector:
+    app: helloclient
+
