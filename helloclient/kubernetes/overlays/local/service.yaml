@@ -1,0 +1,14 @@
+# Generated on Wed Aug 14 00:38:02 EDT 2019
+kind: Service
+apiVersion: v1
+metadata:
+  name: helloclient
+  labels:
+    app: helloclient
+spec:
+  type: LoadBalancer
+  ports:
+    - port: 8080
+      name: helloclient
+  selector:
+    app: helloclient

@@ -1,0 +1,14 @@
+# Generated on Wed Aug 14 00:38:14 EDT 2019
+kind: Service
+apiVersion: v1
+metadata:
+  name: hello-service
+  labels:
+    app: hello-service
+spec:
+  type: LoadBalancer
+  ports:
+    - port: 8080
+      name: hello-service
+  selector:
+    app: hello-service
