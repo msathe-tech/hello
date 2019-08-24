@@ -8,9 +8,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>spring.k8s</groupId>
-	<artifactId>helloclient</artifactId>
+	<artifactId>hello-client</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>helloclient</name>
+	<name>hello-client</name>
 	<description>Client to HelloService</description>
 
 	<properties>

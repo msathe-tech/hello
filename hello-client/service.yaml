@@ -2,9 +2,9 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: helloclient
+  name: hello-client
   labels:
-    app: helloclient
+    app: hello-client
   namespace: hello
 spec:
   type: LoadBalancer
@@ -12,6 +12,6 @@ spec:
     ports:
     - port: 80
       targetPort: 8080
-      name: helloclient
+      name: hello-client
   selector:
-    app: helloclient
+    app: hello-client

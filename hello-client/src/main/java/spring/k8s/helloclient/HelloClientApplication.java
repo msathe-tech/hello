@@ -10,7 +10,7 @@ import org.springframework.web.client.RestTemplate;
 import org.springframework.web.bind.annotation.PathVariable;
 
 @SpringBootApplication
-public class HelloclientApplication {
+public class HelloClientApplication {
 
 	@Bean
 	public RestTemplate restTemplate() {
@@ -18,7 +18,7 @@ public class HelloclientApplication {
 	}
 
 	public static void main(String[] args) {
-		SpringApplication.run(HelloclientApplication.class, args);
+		SpringApplication.run(HelloClientApplication.class, args);
 	}
 
 }
@@ -34,11 +34,11 @@ class HelloClientController {
 		System.out.println("Calling hello-service");
 		String str = restTemplate.getForObject("http://hello-service/" + name, String.class);
 		System.out.println("Return: " + str);
-		return "helloclient says " + str;
+		return "hello-client says " + str;
 	}
 
 	@GetMapping("/")
 	public String sayHi() {
-		return "Hi from helloclient!";
+		return "Hi from hello-client!";
 	}
 }

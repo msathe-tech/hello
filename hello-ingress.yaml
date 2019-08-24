@@ -18,8 +18,8 @@ spec:
         backend:
           serviceName: hello-service
           servicePort: 80
-      - path: /helloclient
+      - path: /hello-client
         backend:
-          serviceName: helloclient
+          serviceName: hello-client
           servicePort: 80
 
